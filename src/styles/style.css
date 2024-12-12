@@ -304,7 +304,7 @@ span.cerrar-modal {
         }
     }
     .second-section{
-        display: none;
+        
         form {
             display: flex;
             flex-direction: column;

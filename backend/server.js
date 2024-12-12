@@ -10,7 +10,9 @@ const port = 5000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000' // Dirección donde corre tu frontend (ajústala si es diferente)
+}));
 
 // Configurar Nodemailer
 const transporter = nodemailer.createTransport({

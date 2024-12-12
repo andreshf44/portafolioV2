@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer>
             <a className='shareSocialIcon'> 
-                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                  <i className="fa fa-share-alt" aria-hidden="true"></i>
             </a>
             <ul className="social-icons">
                 <li> 
