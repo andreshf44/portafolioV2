@@ -5,6 +5,24 @@
     box-sizing: border-box;
     font-family: monospace;
 }
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de scroll */
+} 
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Color de fondo de la pista de desplazamiento */
+    border-radius: 4px;
+} 
+::-webkit-scrollbar-thumb {
+    background: #d6d9da; /* Color de la parte móvil de la barra */
+    border-radius: 4px;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+} 
+::-webkit-scrollbar-thumb:hover {
+    background: #aeb1b2; /* Color de la barra al pasar el mouse por encima */
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #d6d9da;
 }
@@ -53,12 +71,12 @@ header{
         }
     }
     .header-contenido{
-        display: none;
+        display: flex;
         padding-right: 18px;
         a{
             font-size: 14px;
             text-decoration: none;
-            color: #575151;
+            color: #c2b1b1;
             padding: 0 12px;
             border-right: 1px solid;
         }
@@ -86,7 +104,10 @@ header.scrolled {
 
     }
     .header-contenido{
-        display: flex;
+        padding-right: 25px;
+        a{
+            color: #575151;
+        }
     }
 }
 
@@ -184,7 +205,7 @@ p.p-cv{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 40%;
     margin-bottom: 10%;
     h1 {
         width: 60%;
@@ -464,28 +485,28 @@ span.cerrar-modal {
 
 footer{
     display: none;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     flex-direction: column;
     align-items: flex-end;
     ul.social-icons{
-        padding: 0 23px;
-        margin-right: 35px;
-        display: none;
-        justify-content: space-between;
+        visibility: hidden;
+        padding: 0 23px 23px;
+        display: flex
+;
+        top: 38%;
+        right: 0%;
+        gap: 20px;
+        position: fixed;
         flex-direction: column-reverse;
         li{
             display: flex;
-            align-items: center;
-        }
-        li.autor{
             flex-direction: column;
-            align-items: flex-start;
-        }
-        .li-telefono{
-            display: flex;
-            flex-direction: column;
+            div{
+                display: flex;
+                justify-content: baseline;
+                align-items: baseline;
+                flex-direction: column;
+            }
         }
     }
     ul.social-icons li a img{
@@ -494,6 +515,9 @@ footer{
     .shareSocialIcon{
         cursor: pointer;
         i.fa.fa-share-alt {
+            position: fixed;
+            top: 80%;
+            right: 4%;
             font-size: 25px;
             padding: 13px 15px;
             border-radius: 50%;
@@ -504,14 +528,18 @@ footer{
         }
     }
     .shareSocialIcon:hover ~  ul.social-icons{
-        display: flex;
+        visibility: visible;
+    }
+    li.autor{
+        display: block;
+        padding: 0 20px 10px;
     }
 }
 header.scrolled ~ footer{
     display: flex;
     flex-direction: column-reverse;
     ul.social-icons:hover{
-        display: flex;
+        visibility: visible;
     }
 }
 
