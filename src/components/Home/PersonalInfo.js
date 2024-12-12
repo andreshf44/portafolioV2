@@ -12,7 +12,7 @@ const PersonalInfo = () => {
     };
 
     return (
-        <section id="container-fluid">
+        <section id="home">
             <div id="container-info" className="personal-info">
                 <div id="img-background" className="img-container">
                     <img src={backgroundImage} alt="computadora" />

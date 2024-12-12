@@ -12,6 +12,10 @@ const Header = () => {
         }
     };
 
+    const mensajeProyectos = () => {
+        alert('Pagina en Construcción');
+    }
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -23,7 +27,7 @@ const Header = () => {
     return (
         <header className={isScrolled ? 'scrolled' : ''} id="container-header">
             <div className="header-nombre">
-                <a className='scrollActive' href='#container-fluid'>
+                <a className='scrollActive' href='#home'>
                     <h1>Andrés Enrique Herrera Frey</h1>
                 </a>
                 <ul id='social'>
@@ -33,14 +37,14 @@ const Header = () => {
                         <i className="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                     <li><a href="https://github.com/andreshf44">
                         <i className="fa fa-github" aria-hidden="true"></i></a></li>
-                    <li><a href="contacto.html">
+                    <li><a href="#contacto">
                         <i className="fa fa-envelope" aria-hidden="true"></i></a></li>
                 </ul>
                 <p>Ingeniero en informática y Gestión | Técnico en Programación Avanzada | Front-End Web Developer</p>
             </div>
             <div className="header-contenido">
                 <a id="cv" href="#curriculum">Currículum</a>
-                <a id="pr" href="proyecto.html">Proyectos</a>
+                <a id="pr" href="#" onClick={() => mensajeProyectos()}>Proyectos</a>
                 <a id="cn" href="#contacto">Contacto</a>
             </div>
         </header>
